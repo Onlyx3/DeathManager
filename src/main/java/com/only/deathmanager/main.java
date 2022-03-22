@@ -1,5 +1,6 @@
 package com.only.deathmanager;
 
+import com.only.deathmanager.commands.mainCommand;
 import com.only.deathmanager.inventory.InventoryListener;
 import com.only.deathmanager.inventory.SkullListener;
 import com.only.deathmanager.inventory.SkulledPlayers;
@@ -40,4 +41,10 @@ public final class main extends JavaPlugin {
     private void startScheduler() {
         SkulledPlayers.startScheduler(this);
     }
+    private void registerCommands() {
+        this.getCommand("dm").setExecutor(new mainCommand());
+    }
 }
+/*
+TODO: Comments
+ */

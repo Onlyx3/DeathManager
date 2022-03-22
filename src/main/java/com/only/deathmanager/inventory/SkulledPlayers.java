@@ -43,6 +43,12 @@ public class SkulledPlayers {
         team.removeEntry(Bukkit.getOfflinePlayer(uuid).getName());
     }
 
+    // Removes Player from Hashmap and Scoreboard so fully clears skull. TODO: Use this method and remove previous
+    public static void removePlayerSkull(UUID uuid) {
+        SkulledPlayers.getSkulledPlayers().remove(uuid);
+        SkulledPlayers.removeSkulledTag(uuid);
+    }
+
     public static void startScheduler(JavaPlugin plugin) {
         config = main.getMainConfig();
         schedulerSleep = config.getInt("skulling.removalTime");
@@ -71,7 +77,6 @@ public class SkulledPlayers {
                 int value = config.getInt(key);
 
                 skulledPlayers.put(uuid, value);
-
                 team.addEntry(Bukkit.getOfflinePlayer(uuid).getName());
             }
         }

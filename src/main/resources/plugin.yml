@@ -4,3 +4,8 @@ main: com.only.deathmanager.main
 api-version: 1.18
 authors: [ Only ]
 description: A plugin that does various stuff on deaths
+commands:
+  dm:
+    description: Prefix for the available commands
+    usage: /<command>
+    permission: deathmanager.admin
