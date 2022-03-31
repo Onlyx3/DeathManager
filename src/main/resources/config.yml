@@ -26,5 +26,6 @@ skulling:
   initial: 1800
   perHit: 15
   perKill: 600
-  removalTime: 1000  # every x ms the value gets decreased. Dont go too low unless NASA
-  schedulerDecrement: 1
+  removalTime: 1  # every x seconds the value gets decreased. Dont go too low unless NASA
+deathban:
+  time: 3600
